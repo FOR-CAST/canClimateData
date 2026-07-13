@@ -21,7 +21,9 @@ defineModule(sim, list(
                   "R.utils", "sf", "spatialEco", "terra",
                   "dbplyr", # needed for prepClimateLayers
                   "PredictiveEcology/climateData@development (>= 2.2.3)",
-                  "PredictiveEcology/fireSenseUtils@development (>= 0.0.5.9046)",
+                  ## fireSenseUtils intentionally omitted: this module calls none of its exports,
+                  ## and it hard-imports clusters + SpaDES.project (unstable / disallowed here).
+                  ## The scfm modules likewise avoid fireSenseUtils by design.
                   "PredictiveEcology/LandR@development (>= 1.1.0.9064)",
                   "PredictiveEcology/reproducible@development (>= 2.1.1.9002)",
                   "PredictiveEcology/SpaDES.core@development (>= 2.1.5)",
